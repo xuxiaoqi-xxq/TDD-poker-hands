@@ -3,5 +3,5 @@
 
 # How To Run Test
 ```
-python .\test\PokerHandsDemoTest.py -v
+python .\test\DemoTest.py -v
 ```
