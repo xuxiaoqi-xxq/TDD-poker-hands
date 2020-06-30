@@ -20,4 +20,5 @@ homework format：
 ```
 Author: Jasper Wu, Mike Zhang
 Github: https://github.com/androidjp/TDD-poker-hands
+Branch: java-maven-testng, nodejs-jest, ....
 ```
