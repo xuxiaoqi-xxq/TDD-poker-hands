@@ -15,9 +15,9 @@ public class ThreeComparator implements Comparator<PorkerHand> {
         List<Integer> faces1 = porkerHand1.getFaces();
         List<Integer> faces2 = porkerHand2.getFaces();
         if (hasThree1 && hasThree2) {
-            if(faces1.get(3) > faces2.get(3)) {
+            if(faces1.get(2) > faces2.get(2)) {
                 return 1;
-            } else if (faces1.get(3) < faces2.get(3)) {
+            } else if (faces1.get(2) < faces2.get(2)) {
                 return -1;
             } else {
                 Integer intFaces1 = Integer.valueOf(faces1.stream().map(face -> String.valueOf(face)).collect(Collectors.joining()));
