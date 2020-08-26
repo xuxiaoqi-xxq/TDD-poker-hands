@@ -30,9 +30,9 @@ public class FourComparator implements Comparator<PorkerHand> {
         boolean isFour1 = isFour(faces1);
         boolean isFour2 = isFour(faces2);
         if (isFour1 && isFour2) {
-            if (faces1.get(3) > faces2.get(3)) {
+            if (faces1.get(2) > faces2.get(2)) {
                 return 1;
-            } else if (faces1.get(3) < faces1.get(3)) {
+            } else if (faces1.get(2) < faces1.get(2)) {
                 return -1;
             } else {
                 Integer intFaces1 = Integer.valueOf(faces1.stream().map(face -> String.valueOf(face)).collect(Collectors.joining()));
