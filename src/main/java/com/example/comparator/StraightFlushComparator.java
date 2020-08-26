@@ -20,8 +20,8 @@ public class StraightFlushComparator implements Comparator<PorkerHand> {
 
     @Override
     public int compare(PorkerHand porkerHand1, PorkerHand porkerHand2) {
-        boolean isSuit1 = porkerHand1.getSuits().matches("^.{5}$");
-        boolean isSuit2 = porkerHand2.getSuits().matches("^.{5}$");
+        boolean isSuit1 = porkerHand1.getSuits().matches("^((H{5})|(S{5})|(C{5})|(D{5}))$");
+        boolean isSuit2 = porkerHand2.getSuits().matches("^((H{5})|(S{5})|(C{5})|(D{5}))$");
         boolean isContinuousNumber1 = isContinuousNumber(porkerHand1.getFaces());
         boolean isContinuousNumber2 = isContinuousNumber(porkerHand2.getFaces());
         if(isSuit1 && isSuit2) {
