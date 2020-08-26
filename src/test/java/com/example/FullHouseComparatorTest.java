@@ -1,6 +1,5 @@
 package com.example;
 
-import com.example.comparator.FourComparator;
 import com.example.comparator.FullHouseComparator;
 import com.example.entity.PorkerHand;
 import com.example.util.PorkerHandUtil;
@@ -23,6 +22,21 @@ public class FullHouseComparatorTest {
         //then
         assertEquals(1, result);
     }
+
+    @Test
+    void should_return_1_when_call_compare_given_4S5S4C4D5H_and_4H4C3D4S3S() {
+        //given
+        String stringPorkerHand1 = "4S 5S 4C 4D 5H";
+        String stringPorkerHand2 = "4H 4C 4D 3S 3S";
+        PorkerHand porkerHand1 = PorkerHandUtil.parse(stringPorkerHand1);
+        PorkerHand porkerHand2 = PorkerHandUtil.parse(stringPorkerHand2);
+        FullHouseComparator fullHouseComparator = new FullHouseComparator();
+        //when
+        int result = fullHouseComparator.compare(porkerHand1, porkerHand2);
+        //then
+        assertEquals(1, result);
+    }
+
     @Test
     void should_return_negative_1_when_call_compare_given_3H3C5D3S5S_and_4S5S4C4D5H() {
         //given
