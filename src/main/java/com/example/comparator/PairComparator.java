@@ -44,6 +44,6 @@ public class PairComparator implements Comparator<PorkerHand> {
     }
 
     private int compareHighScore(List<Integer> hand1Faces, List<Integer> hand2Faces) {
-        return hand2Faces.stream().max(Integer::compareTo).orElse(0).compareTo(hand1Faces.stream().max(Integer::compareTo).orElse(0));
+        return hand1Faces.stream().max(Integer::compareTo).orElse(0).compareTo(hand2Faces.stream().max(Integer::compareTo).orElse(0));
     }
 }
