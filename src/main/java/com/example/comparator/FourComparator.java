@@ -8,9 +8,9 @@ import java.util.stream.Collectors;
 
 public class FourComparator implements Comparator<PorkerHand> {
 
-    boolean isFour(List<Integer> faces){
+    boolean isFour(List<Integer> faces) {
         int[] nums = new int[15];
-        for(int i = 0;i<faces.size();i++){
+        for (int i = 0; i < faces.size(); i++) {
             nums[faces.get(i)]++;
         }
         for (int num : nums) {
@@ -28,15 +28,7 @@ public class FourComparator implements Comparator<PorkerHand> {
         boolean isFour1 = isFour(faces1);
         boolean isFour2 = isFour(faces2);
         if (isFour1 && isFour2) {
-            if (faces1.get(2) > faces2.get(2)) {
-                return 1;
-            } else if (faces1.get(2) < faces1.get(2)) {
-                return -1;
-            } else {
-                Integer intFaces1 = Integer.valueOf(faces1.stream().map(face -> String.valueOf(face)).collect(Collectors.joining()));
-                Integer intFaces2 = Integer.valueOf(faces2.stream().map(face -> String.valueOf(face)).collect(Collectors.joining()));
-                return intFaces1.compareTo(intFaces2);
-            }
+            return faces1.get(2).compareTo(faces2.get(2));
         } else if (isFour1) {
             return 1;
         } else if (isFour2) {
