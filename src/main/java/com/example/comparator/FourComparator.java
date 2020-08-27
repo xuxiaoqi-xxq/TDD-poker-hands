@@ -4,7 +4,6 @@ import com.example.entity.PorkerHand;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class FourComparator implements Comparator<PorkerHand> {
 
