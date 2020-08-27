@@ -20,9 +20,6 @@ public class Demo {
             new PairComparator(),
             new HighCardComparator()
     );
-    public String run() {
-        return "ABC";
-    }
 
     public int compare(String porkerHand1,String porkerHand2){
         return comparatorList.stream().mapToInt(comparator -> comparator.compare(PorkerHandUtil.parse(porkerHand1), PorkerHandUtil.parse(porkerHand2))).filter(result -> result != 0).findFirst().orElse(0);
