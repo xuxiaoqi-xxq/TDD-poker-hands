@@ -16,8 +16,9 @@ public class Demo {
             new FlushComparator(),
             new StraightComparator(),
             new ThreeComparator(),
-            new TwoPairComparator()
-//            , new HighCardComparator()
+            new TwoPairComparator(),
+            new PairComparator(),
+            new HighCardComparator()
     );
     public String run() {
         return "ABC";
