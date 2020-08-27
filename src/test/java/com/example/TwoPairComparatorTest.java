@@ -18,9 +18,9 @@ public class TwoPairComparatorTest {
         PorkerHand porkerHand2 = PorkerHandUtil.parse(stringPorkerHand2);
         TwoPairComparator twoPairComparator = new TwoPairComparator();
         //when
-        int result = twoPairComparator.compare(porkerHand1,porkerHand2);
+        int result = twoPairComparator.compare(porkerHand1, porkerHand2);
         //
-        assertEquals(-1,result);
+        assertEquals(-1, result);
     }
 
     @Test
@@ -32,9 +32,9 @@ public class TwoPairComparatorTest {
         PorkerHand porkerHand2 = PorkerHandUtil.parse(stringPorkerHand2);
         TwoPairComparator twoPairComparator = new TwoPairComparator();
         //when
-        int result = twoPairComparator.compare(porkerHand1,porkerHand2);
+        int result = twoPairComparator.compare(porkerHand1, porkerHand2);
         //
-        assertEquals(-1,result);
+        assertEquals(-1, result);
     }
 
     @Test
@@ -46,8 +46,8 @@ public class TwoPairComparatorTest {
         PorkerHand porkerHand2 = PorkerHandUtil.parse(stringPorkerHand2);
         TwoPairComparator twoPairComparator = new TwoPairComparator();
         //when
-        int result = twoPairComparator.compare(porkerHand1,porkerHand2);
+        int result = twoPairComparator.compare(porkerHand1, porkerHand2);
         //
-        assertEquals(1,result);
+        assertEquals(1, result);
     }
 }

@@ -24,7 +24,7 @@ public class TwoPairComparator implements Comparator<PorkerHand> {
         return num == 2 ? result : -1;
     }
 
-    Integer getSecondPair(List<Integer> faces){
+    Integer getSecondPair(List<Integer> faces) {
         int[] nums = new int[14];
         for (Integer face : faces) {
             nums[face]++;
@@ -56,19 +56,20 @@ public class TwoPairComparator implements Comparator<PorkerHand> {
                 return 1;
             } else if (hand1TwoPair < hand2TwoPair) {
                 return -1;
-            }else {
-                return compareSecondPair(hand1Faces,hand2Faces);
+            } else {
+                return compareSecondPair(hand1Faces, hand2Faces);
             }
         }
     }
+
     private int compareSecondPair(List<Integer> hand1Faces, List<Integer> hand2Faces) {
         Integer hand1SecondPair = getSecondPair(hand1Faces);
         Integer hand2SecondPair = getSecondPair(hand2Faces);
-        if(hand1SecondPair>hand2SecondPair){
+        if (hand1SecondPair > hand2SecondPair) {
             return 1;
-        }else if(hand1SecondPair<hand2SecondPair){
+        } else if (hand1SecondPair < hand2SecondPair) {
             return -1;
-        }else {
+        } else {
             Integer hand1Result = hand1Faces.stream().reduce(0, Integer::sum);
             Integer hand2Result = hand2Faces.stream().reduce(0, Integer::sum);
             return hand1Result.compareTo(hand2Result);

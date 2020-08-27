@@ -18,9 +18,9 @@ public class StraightFlushComparatorTest {
         PorkerHand porkerHand1 = PorkerHandUtil.parse(stringPorkerHand1);
         PorkerHand porkerHand2 = PorkerHandUtil.parse(stringPorkerHand2);
         StraightFlushComparator straightFlushComparator = new StraightFlushComparator();
-        int result = straightFlushComparator.compare(porkerHand1,porkerHand2);
+        int result = straightFlushComparator.compare(porkerHand1, porkerHand2);
         //then
-        assertEquals(1,result);
+        assertEquals(1, result);
     }
 
     @Test
@@ -32,9 +32,9 @@ public class StraightFlushComparatorTest {
         PorkerHand porkerHand1 = PorkerHandUtil.parse(stringPorkerHand1);
         PorkerHand porkerHand2 = PorkerHandUtil.parse(stringPorkerHand2);
         StraightFlushComparator straightFlushComparator = new StraightFlushComparator();
-        int result = straightFlushComparator.compare(porkerHand1,porkerHand2);
+        int result = straightFlushComparator.compare(porkerHand1, porkerHand2);
         //then
-        assertEquals(-1,result);
+        assertEquals(-1, result);
     }
 
     @Test
@@ -46,8 +46,8 @@ public class StraightFlushComparatorTest {
         PorkerHand porkerHand1 = PorkerHandUtil.parse(stringPorkerHand1);
         PorkerHand porkerHand2 = PorkerHandUtil.parse(stringPorkerHand2);
         StraightFlushComparator straightFlushComparator = new StraightFlushComparator();
-        int result = straightFlushComparator.compare(porkerHand1,porkerHand2);
+        int result = straightFlushComparator.compare(porkerHand1, porkerHand2);
         //then
-        assertEquals(0,result);
+        assertEquals(0, result);
     }
 }
