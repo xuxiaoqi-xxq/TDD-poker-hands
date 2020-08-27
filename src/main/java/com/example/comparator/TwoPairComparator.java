@@ -9,7 +9,7 @@ import java.util.List;
 public class TwoPairComparator implements Comparator<PorkerHand> {
 
     Integer isTwoPair(List<Integer> faces) {
-        int[] nums = new int[14];
+        int[] nums = new int[15];
         for (Integer face : faces) {
             nums[face]++;
         }
