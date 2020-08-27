@@ -24,20 +24,6 @@ public class FullHouseComparatorTest {
     }
 
     @Test
-    void should_return_1_when_call_compare_given_4S5S4C4D5H_and_4H4C3D4S3S() {
-        //given
-        String stringPorkerHand1 = "4S 5S 4C 4D 5H";
-        String stringPorkerHand2 = "4H 4C 4D 3S 3S";
-        PorkerHand porkerHand1 = PorkerHandUtil.parse(stringPorkerHand1);
-        PorkerHand porkerHand2 = PorkerHandUtil.parse(stringPorkerHand2);
-        FullHouseComparator fullHouseComparator = new FullHouseComparator();
-        //when
-        int result = fullHouseComparator.compare(porkerHand1, porkerHand2);
-        //then
-        assertEquals(1, result);
-    }
-
-    @Test
     void should_return_negative_1_when_call_compare_given_3H3C5D3S5S_and_4S5S4C4D5H() {
         //given
         String stringPorkerHand1 = "3H 3C 5D 3S 5S";
@@ -52,10 +38,10 @@ public class FullHouseComparatorTest {
     }
 
     @Test
-    void should_return_0_when_call_compare_given_4S5S4C4D5H_and_4S5S4C4D5H() {
+    void should_return_0_when_call_compare_given_JS5STC4D5H_and_KS5S4C4D5H() {
         //given
-        String stringPorkerHand1 = "4S 5S 4C 4D 5H";
-        String stringPorkerHand2 = "4S 5S 4C 4D 5H";
+        String stringPorkerHand1 = "JS 5S TC 4D 5H";
+        String stringPorkerHand2 = "KS 5S 4C 4D 5H";
         PorkerHand porkerHand1 = PorkerHandUtil.parse(stringPorkerHand1);
         PorkerHand porkerHand2 = PorkerHandUtil.parse(stringPorkerHand2);
         FullHouseComparator fullHouseComparator = new FullHouseComparator();
